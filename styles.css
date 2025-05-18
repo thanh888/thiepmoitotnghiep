@@ -5,17 +5,17 @@
 }
 
 :root {
-    --primary-color: #5a3f87;
-    --secondary-color: #f4d35e;
-    --accent-color: #c9a86e;
-    --text-color: #2a2d34;
-    --light-color: #f8f9fa;
-    --dark-color: #1c1c1c;
-    --border-color: rgba(201, 168, 110, 0.3);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --background-color: #f9f7f5;
-    --gradient-1: linear-gradient(135deg, var(--primary-color), #2b2060);
-    --gradient-2: linear-gradient(135deg, var(--accent-color), #e2c38d);
+    --primary-color: #2e7d32; /* Xanh ngọc lục bảo đậm */
+    --secondary-color: #ffd700; /* Vàng ánh kim */
+    --accent-color: #a1887f; /* Nâu hồng phấn */
+    --text-color: #212121; /* Đen xám đậm */
+    --light-color: #f5f5f5; /* Xám nhạt */
+    --dark-color: #1a1a1a; /* Đen đậm */
+    --border-color: rgba(161, 136, 127, 0.3); /* Nâu hồng nhạt */
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --background-color: #fafafa; /* Trắng ngà nhạt */
+    --gradient-1: linear-gradient(135deg, var(--primary-color), #1b5e20);
+    --gradient-2: linear-gradient(135deg, var(--accent-color), #d7ccc8);
 }
 
 body {
@@ -47,7 +47,7 @@ body {
     position: absolute;
     width: 120px;
     height: 120px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M20 0L23.5 13.5H37.5L26 22L30 36L20 28L10 36L14 22L2.5 13.5H16.5L20 0Z" fill="%23f4d35e18"/></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M20 0L23.5 13.5H37.5L26 22L30 36L20 28L10 36L14 22L2.5 13.5H16.5L20 0Z" fill="%23ffd70018"/></svg>');
     opacity: 0.3;
     animation: float 15s linear infinite;
 }
@@ -88,7 +88,7 @@ body {
     top: 80%;
     left: 20%;
     animation-duration: 19s;
-    animation-delay: 4s;
+    animation-delayJar: 4s;
     transform: scale(1.1);
 }
 
@@ -302,7 +302,7 @@ body {
     position: absolute;
     width: 60px;
     height: 60px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M0 0L60 0L60 60Z" fill="%23c9a86e40"/></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M0 0L60 0L60 60Z" fill="%23a1887f40"/></svg>');
 }
 
 .corner-decoration.top-left {
@@ -339,8 +339,8 @@ body {
     position: relative;
     background-color: #fff;
     background-image: 
-        radial-gradient(circle, rgba(201, 168, 110, 0.05) 1px, transparent 1px),
-        radial-gradient(circle, rgba(201, 168, 110, 0.05) 1px, transparent 1px);
+        radial-gradient(circle, rgba(161, 136, 127, 0.05) 1px, transparent 1px),
+        radial-gradient(circle, rgba(161, 136, 127, 0.05) 1px, transparent 1px);
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px;
 }
@@ -371,7 +371,7 @@ body {
     position: absolute;
     width: 200px;
     height: 60px;
-    background: radial-gradient(ellipse at center, rgba(244, 211, 94, 0.2) 0%, rgba(244, 211, 94, 0) 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0) 70%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -438,7 +438,7 @@ body {
     position: absolute;
     width: 12px;
     height: 12px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 0L7.5 4.5H12L8.5 7L10 12L6 9.5L2 12L3.5 7L0 4.5H4.5L6 0Z" fill="%23c9a86e50"/></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 0L7.5 4.5H12L8.5 7L10 12L6 9.5L2 12L3.5 7L0 4.5H4.5L6 0Z" fill="%23a1887f50"/></svg>');
     animation: twinkle 3s ease infinite;
 }
 
@@ -477,7 +477,7 @@ body {
 
 .event-details {
     margin: 30px 0;
-    background: rgba(248, 247, 245, 0.8);
+    background: rgba(245, 245, 245, 0.8);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px var(--shadow-color);
@@ -674,7 +674,7 @@ body {
 .form-group input:focus,
 .form-group select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(90, 63, 135, 0.1);
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
     outline: none;
 }
 
@@ -701,19 +701,19 @@ body {
 }
 
 .color-option[data-theme="royal"] {
-    background: linear-gradient(135deg, #5a3f87, #2b2060);
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
 }
 
 .color-option[data-theme="elegant"] {
-    background: linear-gradient(135deg, #a67c52, #6d4e35);
+    background: linear-gradient(135deg, #6d4e35, #4e342e);
 }
 
 .color-option[data-theme="modern"] {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    background: linear-gradient(135deg, #263238, #37474f);
 }
 
 .color-option[data-theme="classic"] {
-    background: linear-gradient(135deg, #8b0000, #5d0101);
+    background: linear-gradient(135deg, #6b4e31, #4e342e);
 }
 
 .button-group {
@@ -739,7 +739,7 @@ button {
 }
 
 .btn-primary:hover {
-    background-color: #4a3474;
+    background-color: #2a6b2d;
     transform: translateY(-2px);
 }
 
@@ -756,35 +756,66 @@ button {
 
 /* Theme Variations */
 .theme-royal {
-    --primary-color: #5a3f87;
-    --secondary-color: #f4d35e;
-    --accent-color: #c9a86e;
-    --gradient-1: linear-gradient(135deg, #5a3f87, #2b2060);
-    --gradient-2: linear-gradient(135deg, #c9a86e, #e2c38d);
+    --primary-color: #2e7d32;
+    --secondary-color: #ffd700;
+    --accent-color: #a1887f;
+    --gradient-1: linear-gradient(135deg, #2e7d32, #1b5e20);
+    --gradient-2: linear-gradient(135deg, #a1887f, #d7ccc8);
 }
 
 .theme-elegant {
-    --primary-color: #8b6b43;
-    --secondary-color: #e8d6b3;
-    --accent-color: #b38a50;
-    --gradient-1: linear-gradient(135deg, #8b6b43, #634d30);
-    --gradient-2: linear-gradient(135deg, #b38a50, #d6b686);
+    --primary-color: #6d4e35;
+    --secondary-color: #d7ccc8;
+    --accent-color: #a1887f;
+    --gradient-1: linear-gradient(135deg, #6d4e35, #4e342e);
+    --gradient-2: linear-gradient(135deg, #a1887f, #d7ccc8);
 }
 
 .theme-modern {
-    --primary-color: #2c3e50;
-    --secondary-color: #a7d8e7;
-    --accent-color: #4ca1af;
-    --gradient-1: linear-gradient(135deg, #2c3e50, #203143);
-    --gradient-2: linear-gradient(135deg, #4ca1af, #6ec6d3);
+    --primary-color: #263238;
+    --secondary-color: #b0bec5;
+    --accent-color: #78909c;
+    --gradient-1: linear-gradient(135deg, #263238, #37474f);
+    --gradient-2: linear-gradient(135deg, #78909c, #b0bec5);
 }
 
 .theme-classic {
-    --primary-color: #8b0000;
-    --secondary-color: #e5c597;
-    --accent-color: #a5824d;
-    --gradient-1: linear-gradient(135deg, #8b0000, #5d0101);
-    --gradient-2: linear-gradient(135deg, #a5824d, #c9a97e);
+    --primary-color: #6b4e31;
+    --secondary-color: #d7ccc8;
+    --accent-color: #a1887f;
+    --gradient-1: linear-gradient(135deg, #6b4e31, #4e342e);
+    --gradient-2: linear-gradient(135deg, #a1887f, #d7ccc8);
+}
+
+/* Guest Name Styles */
+.invitation-text.guest-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.invitation-text.guest-name span {
+    font-weight: 600;
+    color: var(--primary-color); /* Sử dụng primary-color để đồng bộ với theme */
+}
+
+/* Đảm bảo tương thích với các theme màu */
+.theme-royal .invitation-text.guest-name span {
+    color: #2e7d32; /* Xanh ngọc lục bảo */
+}
+
+.theme-elegant .invitation-text.guest-name span {
+    color: #6d4e35; /* Nâu đậm */
+}
+
+.theme-modern .invitation-text.guest-name span {
+    color: #263238; /* Xám xanh đậm */
+}
+
+.theme-classic .invitation-text.guest-name span {
+    color: #6b4e31; /* Nâu đất */
 }
 
 /* Responsive styles */
@@ -957,34 +988,4 @@ button {
 .corner-decoration.bottom-right::after {
     bottom: 0;
     right: 0;
-}
-
-.invitation-text.guest-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    color: #333;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.invitation-text.guest-name span {
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-/* Đảm bảo tương thích với các theme màu */
-.theme-royal .invitation-text.guest-name span {
-    color: #1a2a44;
-}
-
-.theme-elegant .invitation-text.guest-name span {
-    color: #4a2c2a;
-}
-
-.theme-modern .invitation-text.guest-name span {
-    color: #1c2526;
-}
-
-.theme-classic .invitation-text.guest-name span {
-    color: #3c2f2f;
 }
