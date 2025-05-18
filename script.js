@@ -13,10 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("theme-royal");
   colorOptions[0].classList.add("active");
 
+  // Xử lý tham số guest từ URL
+  const guestName = getQueryParam("guest");
+  if (guestName) {
+    const decodedGuestName = decodeURIComponent(guestName);
+    document.getElementById("guestName").textContent = decodedGuestName;
+    document.getElementById("inputGuestName").value = decodedGuestName;
+  }
+
   // Open invitation on envelope click
   envelopeContainer.addEventListener("click", function () {
     envelopeContainer.style.display = "none";
     invitationContainer.style.display = "block";
+    customizePanel.style.display = "block"; // Hiển thị panel tùy chỉnh
 
     // Add staggered animation to elements in the invitation
     const animatedElements = document.querySelectorAll(
@@ -36,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   backButton.addEventListener("click", function () {
     invitationContainer.style.display = "none";
     envelopeContainer.style.display = "block";
+    customizePanel.style.display = "none";
   });
 
   // Toggle customize panel
@@ -96,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function updateCardInfo() {
   // Get form values
   const name = document.getElementById("inputName").value;
+  const guestName = document.getElementById("inputGuestName").value;
   const time = document.getElementById("inputTime").value;
   const location = document.getElementById("inputLocation").value;
   const host = document.getElementById("inputHost").value;
@@ -105,6 +116,7 @@ function updateCardInfo() {
 
   // Update card with new values if they're not empty
   if (name) document.getElementById("graduateName").textContent = name;
+  if (guestName) document.getElementById("guestName").textContent = guestName;
   if (time) document.getElementById("eventTime").textContent = time;
   if (location) document.getElementById("eventLocation").textContent = location;
   if (host) document.getElementById("hostName").textContent = host;
@@ -187,14 +199,3 @@ function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
-
-// Cập nhật tên khách mời từ tham số URL khi trang tải
-window.addEventListener("load", function () {
-  const guestName = getQueryParam("guest");
-  if (guestName) {
-    document.getElementById("guestName").textContent =
-      decodeURIComponent(guestName);
-    document.getElementById("inputGuestName").value =
-      decodeURIComponent(guestName);
-  }
-});

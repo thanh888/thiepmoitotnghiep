@@ -958,3 +958,33 @@ button {
     bottom: 0;
     right: 0;
 }
+
+.invitation-text.guest-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.invitation-text.guest-name span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Đảm bảo tương thích với các theme màu */
+.theme-royal .invitation-text.guest-name span {
+    color: #1a2a44;
+}
+
+.theme-elegant .invitation-text.guest-name span {
+    color: #4a2c2a;
+}
+
+.theme-modern .invitation-text.guest-name span {
+    color: #1c2526;
+}
+
+.theme-classic .invitation-text.guest-name span {
+    color: #3c2f2f;
+}
